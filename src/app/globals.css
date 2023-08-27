@@ -2,4 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "NotoSans";
+  src: url("/fonts/NotoSansKR-Medium.woff") format("woff");
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("/fonts/NotoSans-Medium.woff") format("woff");
+  font-style: normal;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
