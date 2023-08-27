@@ -9,8 +9,20 @@
 }
 
 @font-face {
-  font-family: "NotoSansKR";
+  font-family: "NotoSans";
   src: url("/fonts/NotoSans-Medium.woff") format("woff");
   font-style: normal;
   unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: "ChosunGu";
+  src: url("/fonts/ChosunGu.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GowunBatang";
+  src: url("/fonts/GowunBatang-Regular.woff") format("woff");
+  font-style: normal;
 }
