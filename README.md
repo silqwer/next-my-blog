@@ -4,8 +4,7 @@
 
 ### [github-label-sync](https://github.com/Financial-Times/github-label-sync): repository label을 한번에 [적용](https://velog.io/@rimo09/Github-github-label-%ED%95%9C%EB%B2%88%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
 
-- access-token필요
-- 명령어를 실행하기 전 root/label.json은 리포지토리에 올라가있어야한다.
+access-token필요
 
 ```bash
 // 명령어 예
