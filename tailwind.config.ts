@@ -12,6 +12,7 @@ const config: Config = {
         notosans: ["NotoSans"],
         gulim: ["ChosunGu"],
         batang: ["GowunBatang"],
+        ms: ["ms_sans_serif"],
       },
     },
   },
