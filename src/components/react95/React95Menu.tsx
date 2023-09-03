@@ -1,12 +1,11 @@
 "use client";
 
-import { ThemeProvider } from "styled-components";
-import original from "react95/dist/themes/original";
 import { MenuList, MenuListItem, Separator } from "react95";
+import React95 from "./React95";
 
 export default function React95Menu() {
   return (
-    <ThemeProvider theme={original}>
+    <React95>
       <MenuList>
         <MenuListItem>
           <div className="cursor-pointer font-ms">🎤 Sing</div>
@@ -17,6 +16,6 @@ export default function React95Menu() {
         <Separator />
         <MenuListItem disabled>😴 Sleep</MenuListItem>
       </MenuList>
-    </ThemeProvider>
+    </React95>
   );
 }
