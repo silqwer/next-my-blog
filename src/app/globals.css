@@ -28,6 +28,14 @@
 }
 
 @font-face {
+  font-family: "GowunBatang";
+  src: url("/fonts/GowunBatang-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'ms_sans_serif';
   src:
     url("/fonts/ms_sans_serif.woff") format('woff'), 
