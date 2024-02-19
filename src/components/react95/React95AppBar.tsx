@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   AppBar,
@@ -8,60 +8,61 @@ import {
   Separator,
   TextInput,
   Toolbar,
-} from "react95";
-import React95 from "./React95";
-import { useState } from "react";
+} from 'react95';
+import React95 from './React95';
+import { useState } from 'react';
 
 export default function React95AppBar() {
   const [open, setOpen] = useState(false);
 
   return (
     <React95>
-      <AppBar>
-        <Toolbar style={{ justifyContent: "space-between" }}>
-          <div style={{ position: "relative", display: "inline-block" }}>
-            <Button
-              onClick={() => setOpen(!open)}
-              active={open}
-              style={{ fontWeight: "bold" }}
+      <div className="relative">
+        <AppBar position={'fixed'} style={{ top: 'initial', bottom: 0 }}>
+          {open && (
+            <MenuList
+              style={{
+                position: 'absolute',
+                left: '0',
+                bottom: '45px',
+              }}
+              onClick={() => setOpen(false)}
             >
-              Start
-            </Button>
-            {open && (
-              <MenuList
-                style={{
-                  position: "absolute",
-                  left: "0",
-                  top: "100%",
-                }}
-                onClick={() => setOpen(false)}
+              <MenuListItem>
+                <span role="img" aria-label="👨‍💻">
+                  👨‍💻
+                </span>
+                Profile
+              </MenuListItem>
+              <MenuListItem>
+                <span role="img" aria-label="📁">
+                  📁
+                </span>
+                My account
+              </MenuListItem>
+              <Separator />
+              <MenuListItem disabled>
+                <span role="img" aria-label="🔙">
+                  🔙
+                </span>
+                Logout
+              </MenuListItem>
+            </MenuList>
+          )}
+          <Toolbar style={{ justifyContent: 'space-between' }}>
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <Button
+                onClick={() => setOpen(!open)}
+                style={{ fontWeight: 'bold' }}
               >
-                <MenuListItem>
-                  <span role="img" aria-label="👨‍💻">
-                    👨‍💻
-                  </span>
-                  Profile
-                </MenuListItem>
-                <MenuListItem>
-                  <span role="img" aria-label="📁">
-                    📁
-                  </span>
-                  My account
-                </MenuListItem>
-                <Separator />
-                <MenuListItem disabled>
-                  <span role="img" aria-label="🔙">
-                    🔙
-                  </span>
-                  Logout
-                </MenuListItem>
-              </MenuList>
-            )}
-          </div>
+                Start
+              </Button>
+            </div>
 
-          <TextInput placeholder="Search..." width={150} />
-        </Toolbar>
-      </AppBar>
+            <TextInput placeholder="Search..." width={150} />
+          </Toolbar>
+        </AppBar>
+      </div>
     </React95>
   );
 }

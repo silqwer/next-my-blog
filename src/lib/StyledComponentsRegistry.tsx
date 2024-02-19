@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { useServerInsertedHTML } from "next/navigation";
-import { ServerStyleSheet, StyleSheetManager } from "styled-components";
+import { useState } from 'react';
+import { useServerInsertedHTML } from 'next/navigation';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import isPropValid from '@emotion/is-prop-valid';
 
 type Props = {
   children: React.ReactNode;
@@ -17,10 +18,13 @@ export default function StyledComponentsRegistry({ children }: Props) {
     return <>{styles}</>;
   });
 
-  if (typeof window !== "undefined") return <>{children}</>;
+  if (typeof window !== 'undefined') return <>{children}</>;
 
   return (
-    <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
+    <StyleSheetManager
+      shouldForwardProp={isPropValid}
+      sheet={styledComponentsStyleSheet.instance}
+    >
       {children}
     </StyleSheetManager>
   );
