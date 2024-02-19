@@ -11,6 +11,7 @@ import {
 } from 'react95';
 import React95 from './React95';
 import { useState } from 'react';
+import { Logo } from '@react95/icons';
 
 export default function React95AppBar() {
   const [open, setOpen] = useState(false);
@@ -55,7 +56,7 @@ export default function React95AppBar() {
                 onClick={() => setOpen(!open)}
                 style={{ fontWeight: 'bold' }}
               >
-                Start
+                <Logo variant='32x32_4' />
               </Button>
             </div>
 

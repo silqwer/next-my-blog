@@ -1,7 +1,7 @@
 import "./globals.css";
+import '@react95/icons/icons.css';
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "@/lib/StyledComponentsRegistry";
-import React95AppBar from "@/components/react95/React95AppBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",

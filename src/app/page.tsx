@@ -1,6 +1,7 @@
-import React95AppBar from "@/components/react95/React95AppBar";
-import React95Menu from "@/components/react95/React95Menu";
-import StyledButton from "@/components/StyledButton";
+import React95AppBar from '@/components/react95/React95AppBar';
+import React95Menu from '@/components/react95/React95Menu';
+import React95Window from '@/components/react95/React95Window';
+import StyledButton from '@/components/StyledButton';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <h1 className=" font-batang">고운바탕</h1>
 
       <StyledButton>스타일드 컴포넌트 동작</StyledButton>
+      <React95Window />
       <React95Menu />
       <React95AppBar />
     </main>
